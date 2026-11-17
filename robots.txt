@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /metricas-
+Allow: /
+Disallow: /404.html
+
+Sitemap: https://essenes.com.br/sitemap.xml

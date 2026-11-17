@@ -1,0 +1,16 @@
+VERSÃO ATUAL: V33. Leia primeiro 00_INSTALAR_ESSENES.txt e RELEASE-V33.md.
+
+Histórico da atualização anterior:
+
+ESSENES — ATUALIZAÇÃO DO SITE
+
+O pacote contém o site completo para a pasta public_html.
+
+Alterações: avisos em tela cheia ao concluir a Roda e para convidar a conversar com Alexandre pelo WhatsApp; compartilhamento das notas é opcional e exige a escolha do visitante. A nota de cada área aparece diretamente no gráfico de resultado e no SVG baixado; ajustes de legibilidade, tamanho dos botões e disposição para celulares; acesso à Portaria nº 702/2018 no Ministério da Saúde pela seção de dúvidas da página inicial; melhorias na Roda da Vida, incluindo atualização visual ao escolher a nota, indicação de resultado parcial e correção ao editar a única área avaliada. Os links de WhatsApp usam o número que já constava no site: +55 61 98173-8997. Confirme que é o número correto antes de publicar.
+
+Para publicar na Hostinger:
+1. Faça um backup completo da pasta public_html.
+2. Envie o ZIP e extraia seu conteúdo dentro de public_html, substituindo os arquivos correspondentes. O arquivo .htaccess também está incluído: verifique se a configuração da hospedagem continua compatível antes de substituí-lo.
+3. Teste a página inicial, a Roda da Vida em computador e celular e os botões de WhatsApp. Confirme no aplicativo o destinatário antes de enviar uma mensagem.
+
+O pacote não altera automaticamente o site que está no ar. A extração não remove arquivos antigos da hospedagem. O resultado da Roda é baixado no formato SVG.

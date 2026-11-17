@@ -1,0 +1,86 @@
+/* V37: bounded result layout and an optional, non-modal invitation. */
+.wheel-page{min-width:0}
+.wheel-page #result.result{max-width:1040px;padding-block:30px 44px}
+.wheel-page #result .result-heading{max-width:760px;margin:0 auto 24px}
+.wheel-page #result .result-heading h1{font-size:clamp(30px,3.4vw,44px);margin:10px 0 12px;line-height:1.1}
+.wheel-page #result .result-heading>p#result-summary{font-size:14px;line-height:1.7;margin-top:0}
+.wheel-page #result .result-heading>.quiet{font-size:11px;margin-top:8px}
+.wheel-page #result .result-grid{grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);max-width:1040px;gap:20px;align-items:start}
+.wheel-page #result .result-chart-card{min-width:0;padding:18px 20px;border-radius:18px}
+.wheel-page #result .chart-heading h2{font-size:25px}
+.wheel-page #result .chart-heading span{flex-shrink:0;font-size:10px}
+.wheel-page #result #result-wheel{width:100%;max-width:420px;margin:4px auto;padding:0;overflow-x:hidden;overflow-y:hidden}
+.wheel-page #result #result-wheel svg{display:block;min-width:0;max-width:100%;width:100%;height:auto;margin:0}
+.wheel-page #result #result-wheel.is-zoomed{max-height:440px;overflow:auto;overscroll-behavior:contain;touch-action:pan-x pan-y}
+.wheel-page #result #result-wheel.is-zoomed svg{width:740px;min-width:740px;max-width:none}
+.wheel-page #result .wheel-mobile-controls{display:flex;flex-direction:row;justify-content:center;align-items:center;gap:10px;margin:0 auto 8px}
+.wheel-page #result .wheel-mobile-controls button{min-height:44px;padding:8px 12px;font:800 11px/1.4 var(--sans);border:1px solid #8baea0;border-radius:30px;background:#e2eee5;color:var(--forest)}
+.wheel-page #result .wheel-mobile-controls button[aria-pressed="true"]{background:var(--forest);color:white}
+.wheel-page #result .wheel-mobile-controls span{max-width:130px;font-size:10px;line-height:1.5}
+.wheel-page #result .result-legend{display:flex;justify-content:center;gap:18px;padding:0;margin:4px 0;font-size:11px}
+.wheel-page #result .chart-key{font-size:10px;line-height:1.5;margin:0}
+.wheel-page #result details>summary{font:700 12px/1.6 var(--sans);min-height:44px;padding:12px 0;color:var(--forest)}
+.wheel-page #result .result-area-details{margin-top:12px;border-top:1px solid var(--line)}
+.wheel-page #result .result-area-details summary{text-align:center;list-style:revert}
+.wheel-page #result .result-area-details .wheel-category-legend{margin:8px 0;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.wheel-page #result .result-tools{margin-top:10px;gap:12px;justify-content:space-between}
+.wheel-page #result .result-tools .action{min-height:44px;padding:10px 14px;font-size:11px}
+.wheel-page #result .result-tools .text-button{font-size:11px;min-height:44px;padding-inline:6px}
+.wheel-page #result .result-conversation{width:100%;max-width:none;min-width:0;margin:0;padding:26px;border-radius:18px;background:linear-gradient(135deg,#edf2e7,#e6eee3)}
+.wheel-page #result .result-conversation .kicker{font-size:9px;letter-spacing:.1em;line-height:1.7}
+.wheel-page #result .result-conversation h2{font-size:34px;line-height:1.12;margin:14px 0}
+.wheel-page #result .result-conversation>p:not(.kicker):not(.quiet){font-size:14px;line-height:1.85;margin:0}
+.wheel-page #result .result-conversation>.whatsapp{min-height:48px;margin-top:22px;padding:12px 14px;font-size:12px;gap:8px}
+.wheel-page #result .result-share-details{margin-top:8px}
+.wheel-page #result .focus-label{margin:8px 0}
+.wheel-page #result .message-preview{margin:0}
+.wheel-page #result pre{max-height:220px;overflow-y:auto}
+.wheel-page #result .share-note{font-size:11px;line-height:1.65;margin-top:10px}
+.wheel-page #result .score-details{margin:18px 0 0;padding:0 20px;border:1px solid var(--line);border-radius:14px;background:#ffffff80}
+.wheel-page #result .score-details>summary{font-size:13px;padding-block:16px}
+.wheel-page #result .score-details>summary span{font-weight:400;font-size:11px;color:var(--muted);margin-left:12px}
+.wheel-page #result .score-details-hint{font-size:12px;color:var(--muted);margin-bottom:16px}
+.wheel-page #result .score-list{padding-bottom:20px}
+.wheel-page .result-chat,.wheel-page .result-chat-launcher{position:fixed;z-index:30;right:max(20px,env(safe-area-inset-right));bottom:calc(20px + env(safe-area-inset-bottom));max-width:calc(100% - 24px)}
+.wheel-page .result-chat{width:328px;max-height:calc(100dvh - 32px);overflow-y:auto;overscroll-behavior:contain;border:1px solid #b9cbbb;border-radius:18px;background:#fffef9;box-shadow:0 10px 36px #092c2524;animation:result-chat-enter .25s ease-out both}
+.wheel-page .result-chat-header{display:flex;align-items:center;gap:10px;padding:12px 12px 10px 16px;border-bottom:1px solid #dce4d8;background:#f1f5ed}
+.wheel-page .result-chat-mark{display:grid;place-items:center;flex-shrink:0;width:36px;height:36px;border-radius:50%;background:var(--forest);color:#f7ecd3;font:600 27px/1 var(--serif)}
+.wheel-page .result-chat-header>div{flex:1;min-width:0}
+.wheel-page .result-chat-header strong{display:block;font:800 12px/1.5 var(--sans)}
+.wheel-page .result-chat-header>div>span{display:block;font:400 10px/1.5 var(--sans);color:var(--muted)}
+.wheel-page .result-chat-close{display:grid;place-items:center;flex-shrink:0;min-width:44px;min-height:44px;border:0;border-radius:50%;background:transparent;color:var(--forest);font:400 26px/1 var(--sans)}
+.wheel-page .result-chat-close:hover{background:#e2eadd}
+.wheel-page .result-chat-content{padding:15px 18px 13px;font-size:12px;line-height:1.75}
+.wheel-page .result-chat-content .result-chat-title{font-weight:800;font-size:13px;line-height:1.5;margin-bottom:7px}
+.wheel-page .result-chat-content .action{width:100%;min-height:46px;font-size:12px;padding:10px 12px;gap:10px;margin-top:13px}
+.wheel-page .result-chat-content .result-chat-note{font-size:10px;line-height:1.6;color:var(--muted);margin-top:8px;text-align:center}
+.wheel-page .result-chat-launcher{display:flex;align-items:center;gap:10px;min-height:48px;padding:12px 17px;border:1px solid #b9cbbb;border-radius:30px;background:var(--forest);color:white;box-shadow:0 5px 20px #092c2520;font:700 11px/1.5 var(--sans)}
+.wheel-page .result-chat-launcher>span{font-size:22px;line-height:1}
+.wheel-page #contact-chat[hidden],.wheel-page #contact-launcher[hidden]{display:none}
+.wheel-page .chat-announcement{position:absolute;width:1px;height:1px;padding:0;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+@keyframes result-chat-enter{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
+@media(max-width:760px){
+ .wheel-page #result.result{width:calc(100% - 32px);padding-block:24px 32px}
+ .wheel-page #result .result-heading{text-align:left;margin-bottom:18px}
+ .wheel-page #result .result-heading .kicker{justify-content:flex-start;font-size:9px}
+ .wheel-page #result .result-heading h1{font-size:32px;margin-block:10px}
+ .wheel-page #result .result-heading>p#result-summary{font-size:12px}
+ .wheel-page #result .result-heading>.quiet{font-size:10px}
+ .wheel-page #result .result-grid{grid-template-columns:minmax(0,1fr);gap:14px}
+ .wheel-page #result .result-chart-card{padding:14px;border-radius:16px}
+ .wheel-page #result .chart-heading h2{font-size:23px}
+ .wheel-page #result #result-wheel{max-width:320px}
+ .wheel-page #result #result-wheel.is-zoomed{max-height:340px}
+ .wheel-page #result .result-conversation{padding:22px}
+ .wheel-page #result .result-conversation h2{font-size:30px}
+ .wheel-page #result .result-conversation>p:not(.kicker):not(.quiet){font-size:13px}
+ .wheel-page #result .score-details{padding-inline:14px}
+ .wheel-page #result .score-details>summary span{display:block;margin:3px 0 0 17px}
+ .wheel-page .result-chat,.wheel-page .result-chat-launcher{right:max(12px,env(safe-area-inset-right));bottom:calc(12px + env(safe-area-inset-bottom))}
+ .wheel-page .result-chat{width:304px;max-height:min(360px,calc(100dvh - 24px));border-radius:16px}
+ .wheel-page .result-chat-header{padding:8px 8px 8px 14px}
+ .wheel-page .result-chat-content{padding:12px 15px}
+ .wheel-page .result-chat-content .action{margin-top:10px}
+ .wheel-page #result .result-area-details .wheel-category-legend{grid-template-columns:minmax(0,1fr)}
+}
+@media(prefers-reduced-motion:reduce){.wheel-page .result-chat{animation:none}}

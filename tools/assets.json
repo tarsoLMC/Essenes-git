@@ -1,0 +1,14 @@
+{
+  "css": {
+    "site": "/assets/css/essenes-site.49d192c15dfe.css",
+    "wheel": "/assets/css/essenes-wheel.1bb1027db367.css",
+    "home": "/assets/css/essenes-home.0acda7b4cebe.css",
+    "contact": "/assets/css/essenes-contact.36c245a94adb.css"
+  },
+  "js": {
+    "site": "/assets/js/essenes-site.76e00b7e5c2f.js",
+    "wheel": "/assets/js/essenes-wheel.7df23f054972.js",
+    "intro": "/assets/js/essenes-intro.ef31a9da2e5e.js",
+    "contact": "/assets/js/essenes-contact.4fcddd23dc11.js"
+  }
+}

@@ -1,0 +1,1 @@
+{"private":true,"scripts":{"build":"node build-assets.cjs"},"devDependencies":{"lightningcss":"1.33.0","terser":"5.51.2"}}
