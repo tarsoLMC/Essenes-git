@@ -1,0 +1,60 @@
+/* Essenes - refinamento institucional dos controles. Sem setas em emoji. */
+body:not(.wheel-page):not(.essenes-family-page) .btn {
+ border:1px solid #819a82;
+ transition:border-color .2s ease,background-color .2s ease,box-shadow .2s ease,transform .2s ease;
+}
+body:not(.wheel-page):not(.essenes-family-page) .btn-primary,
+body:not(.wheel-page):not(.essenes-family-page) .btn-secondary,
+body:not(.wheel-page):not(.essenes-family-page) .about-copy .btn-light,
+body:not(.wheel-page):not(.essenes-family-page) .mobile-menu>.btn{
+ border-color:#1d4632;
+ box-shadow:inset 0 1px 0 rgba(255,255,255,.1),0 5px 16px rgba(26,66,46,.14);
+}
+body:not(.wheel-page):not(.essenes-family-page) .btn-ghost,
+body:not(.wheel-page):not(.essenes-family-page) .btn-outline-dark,
+body:not(.wheel-page):not(.essenes-family-page) .btn-light{
+ border-color:#9baa97;
+}
+body:not(.wheel-page):not(.essenes-family-page) .btn-outline{border-color:rgba(235,245,224,.52)}
+body:not(.wheel-page):not(.essenes-family-page) .wheel-invite .btn{border-color:#bca475;box-shadow:0 4px 16px rgba(0,0,0,.12)}
+body:not(.wheel-page):not(.essenes-family-page) .btn:hover:not(:disabled){border-color:#64886c}
+body:not(.wheel-page):not(.essenes-family-page) .btn-primary:hover,
+body:not(.wheel-page):not(.essenes-family-page) .btn-secondary:hover{border-color:#193c2e}
+body:not(.wheel-page):not(.essenes-family-page) .btn:focus-visible,
+body:not(.wheel-page):not(.essenes-family-page) a:focus-visible{outline:2px solid #aa8955;outline-offset:3px}
+.es-intro-skip{border-color:#c6b995!important}
+.v36-contact .v36-copy,.v36-contact .v36-channel{border:1px solid #c0cebb;border-radius:12px}
+.v36-contact .v36-channel{padding:14px 16px;margin-block:8px;background:rgba(255,255,255,.57)}
+.v36-contact .v36-copy{padding:10px 16px}
+body.wheel-page .action.primary{border:1px solid #12392f}
+body.wheel-page .action.secondary{border:1px solid #9cac9d}
+body.wheel-page .action:focus-visible{outline:2px solid #b6813e;outline-offset:3px}
+body.essenes-family-page .btn{border:1px solid #406044}
+body.essenes-family-page .btn.secondary{border:1px solid #a3b3a1;padding-left:14px;padding-right:14px;border-radius:5px}
+body.essenes-family-page .btn.outline{border:1px solid #8fa38e}
+body.essenes-family-page .btn:focus-visible{outline:2px solid #b18a56;outline-offset:3px}
+@media(max-width:760px){
+ body.essenes-has-mobile-dock .essenes-mobile-dock{
+  background:rgba(250,248,241,.985);border-top:1px solid #b9c9b7;gap:3px;
+ }
+ body.essenes-has-mobile-dock .essenes-mobile-dock__link{
+  border:1px solid #bdcdbc;background:#fffdf8;border-radius:12px;
+  box-shadow:0 1px 2px rgba(34,66,45,.055);min-height:59px;color:#2d5140;
+ }
+ body.essenes-has-mobile-dock .essenes-mobile-dock__link[aria-current]{
+  border-color:#6e9475;background:#e7eee4;color:#204a35;
+  box-shadow:inset 0 0 0 1px rgba(67,108,73,.1);
+ }
+ body.essenes-has-mobile-dock .essenes-mobile-dock__link[aria-current] .essenes-mobile-dock__icon{background:transparent;box-shadow:none}
+ body.essenes-has-mobile-dock .essenes-mobile-dock__link--contact{border-color:#2a5b43;background:#e9f0e7;color:#1b4b35}
+ body.essenes-has-mobile-dock .essenes-mobile-dock__link--contact .essenes-mobile-dock__icon{
+  border:1px solid #17422d;background:#24543a;color:#fff;
+ }
+ body.essenes-has-mobile-dock .essenes-mobile-dock__link:hover{border-color:#547f5d;background:#f0f4eb}
+ body.essenes-has-mobile-dock .essenes-mobile-dock__link:focus-visible{outline:2px solid #ae8e5f;outline-offset:-2px}
+}
+@media(max-width:350px){
+ body.essenes-has-mobile-dock .essenes-mobile-dock{gap:2px}
+ body.essenes-has-mobile-dock .essenes-mobile-dock__link{border-radius:10px;min-width:0}
+}
+@media(prefers-reduced-motion:reduce){body:not(.wheel-page):not(.essenes-family-page) .btn{transition:none}}
