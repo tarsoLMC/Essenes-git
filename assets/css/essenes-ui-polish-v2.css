@@ -33,28 +33,83 @@ body.essenes-family-page .btn{border:1px solid #406044}
 body.essenes-family-page .btn.secondary{border:1px solid #a3b3a1;padding-left:14px;padding-right:14px;border-radius:5px}
 body.essenes-family-page .btn.outline{border:1px solid #8fa38e}
 body.essenes-family-page .btn:focus-visible{outline:2px solid #b18a56;outline-offset:3px}
+
+/* Navegação Liquid Glass — exclusivamente barra inferior mobile, sem bordas. */
 @media(max-width:760px){
+ html{scroll-padding-bottom:calc(110px + env(safe-area-inset-bottom,0px))}
+ body.essenes-has-mobile-dock{padding-bottom:calc(106px + env(safe-area-inset-bottom,0px))}
+ body.essenes-has-mobile-dock .v33-back-top{bottom:calc(110px + env(safe-area-inset-bottom,0px))}
  body.essenes-has-mobile-dock .essenes-mobile-dock{
-  background:rgba(250,248,241,.985);border-top:1px solid #b9c9b7;gap:3px;
+  position:fixed;inset:auto max(12px,env(safe-area-inset-right,0px)) calc(10px + env(safe-area-inset-bottom,0px)) max(12px,env(safe-area-inset-left,0px));width:auto;
+  z-index:70;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:2px;align-items:stretch;
+  min-height:74px;padding:7px;border:0;border-radius:25px;overflow:hidden;isolation:isolate;
+  background:linear-gradient(140deg,rgba(255,255,255,.68),rgba(243,248,241,.63) 40%,rgba(221,235,223,.58) 74%,rgba(255,255,255,.59));
+  -webkit-backdrop-filter:blur(26px) saturate(170%);backdrop-filter:blur(26px) saturate(170%);
+  box-shadow:0 14px 34px rgba(19,57,38,.16),0 3px 9px rgba(14,45,31,.07),inset 0 1px 0 rgba(255,255,255,.78);
+ }
+ body.essenes-has-mobile-dock .essenes-mobile-dock::before{
+  content:"";position:absolute;inset:0;z-index:0;pointer-events:none;border-radius:inherit;
+  background:radial-gradient(ellipse 72% 90% at 15% -18%,rgba(255,255,255,.60),transparent 73%),linear-gradient(to bottom,rgba(255,255,255,.17),transparent 43%);
  }
  body.essenes-has-mobile-dock .essenes-mobile-dock__link{
-  border:1px solid #bdcdbc;background:#fffdf8;border-radius:12px;
-  box-shadow:0 1px 2px rgba(34,66,45,.055);min-height:59px;color:#2d5140;
+  position:relative;z-index:1;min-width:0;min-height:60px;padding:5px 1px 4px;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;
+  color:#385947;border:0;border-radius:17px;background:transparent;box-shadow:none;
+  text-decoration:none;-webkit-tap-highlight-color:transparent;
+  transition:color .22s ease,background-color .22s ease,box-shadow .22s ease,transform .22s ease;
  }
+ body.essenes-has-mobile-dock .essenes-mobile-dock__icon{
+  display:grid;place-items:center;width:34px;height:33px;border:0;border-radius:13px;
+  background:rgba(255,255,255,.13);box-shadow:inset 0 1px 0 rgba(255,255,255,.22);
+  transition:background-color .22s ease,transform .22s ease;
+ }
+ body.essenes-has-mobile-dock .essenes-mobile-dock__icon svg{width:21px;height:21px}
+ body.essenes-has-mobile-dock .essenes-mobile-dock__label{font-size:10px;font-weight:650;line-height:1.14;letter-spacing:-.08px}
  body.essenes-has-mobile-dock .essenes-mobile-dock__link[aria-current]{
-  border-color:#6e9475;background:#e7eee4;color:#204a35;
-  box-shadow:inset 0 0 0 1px rgba(67,108,73,.1);
+  color:#173e2b;background:rgba(255,255,255,.39);
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.52),0 4px 12px rgba(37,78,51,.085);
  }
- body.essenes-has-mobile-dock .essenes-mobile-dock__link[aria-current] .essenes-mobile-dock__icon{background:transparent;box-shadow:none}
- body.essenes-has-mobile-dock .essenes-mobile-dock__link--contact{border-color:#2a5b43;background:#e9f0e7;color:#1b4b35}
+ body.essenes-has-mobile-dock .essenes-mobile-dock__link[aria-current]::before{content:none;display:none}
+ body.essenes-has-mobile-dock .essenes-mobile-dock__link[aria-current] .essenes-mobile-dock__icon{
+  background:rgba(255,255,255,.37);box-shadow:inset 0 1px 0 rgba(255,255,255,.55);
+ }
+ body.essenes-has-mobile-dock .essenes-mobile-dock__link--contact{color:#214d38}
  body.essenes-has-mobile-dock .essenes-mobile-dock__link--contact .essenes-mobile-dock__icon{
-  border:1px solid #17422d;background:#24543a;color:#fff;
+  color:#fff;border:0;background:linear-gradient(160deg,#438263,#295e45 55%,#194530);
+  box-shadow:0 5px 14px rgba(21,68,43,.2),inset 0 1px 0 rgba(255,255,255,.27);
  }
- body.essenes-has-mobile-dock .essenes-mobile-dock__link:hover{border-color:#547f5d;background:#f0f4eb}
- body.essenes-has-mobile-dock .essenes-mobile-dock__link:focus-visible{outline:2px solid #ae8e5f;outline-offset:-2px}
+ body.essenes-has-mobile-dock .essenes-mobile-dock__link:active{transform:scale(.955)}
+ body.essenes-has-mobile-dock .essenes-mobile-dock__link:focus-visible{outline:2px solid #ad915d;outline-offset:-3px}
+ body.wheel-page #result .result-chat,body.wheel-page #result .result-chat-launcher{
+  bottom:calc(111px + env(safe-area-inset-bottom,0px))!important;
+  max-height:calc(100dvh - 130px - env(safe-area-inset-bottom,0px));
+ }
+ body.essenes-family-page #toast{bottom:calc(111px + env(safe-area-inset-bottom,0px))}
+ body.wheel-page.is-answering.essenes-has-mobile-dock{padding-bottom:0!important}
+}
+@media(hover:hover) and (max-width:760px){
+ body.essenes-has-mobile-dock .essenes-mobile-dock__link:hover{background:rgba(255,255,255,.23);color:#173e2b}
 }
 @media(max-width:350px){
- body.essenes-has-mobile-dock .essenes-mobile-dock{gap:2px}
- body.essenes-has-mobile-dock .essenes-mobile-dock__link{border-radius:10px;min-width:0}
+ body.essenes-has-mobile-dock .essenes-mobile-dock{left:8px;right:8px;padding:6px 5px;gap:0;border-radius:22px}
+ body.essenes-has-mobile-dock .essenes-mobile-dock__label{font-size:9px;letter-spacing:-.2px}
+ body.essenes-has-mobile-dock .essenes-mobile-dock__icon{width:31px;height:31px}
 }
-@media(prefers-reduced-motion:reduce){body:not(.wheel-page):not(.essenes-family-page) .btn{transition:none}}
+@media(max-height:430px) and (orientation:landscape) and (max-width:900px){
+ body.essenes-has-mobile-dock .essenes-mobile-dock{display:none}
+ body.essenes-has-mobile-dock{padding-bottom:0}
+}
+@media(prefers-reduced-motion:reduce){
+ body:not(.wheel-page):not(.essenes-family-page) .btn{transition:none}
+ body.essenes-has-mobile-dock .essenes-mobile-dock__link,body.essenes-has-mobile-dock .essenes-mobile-dock__icon{transition:none}
+}
+@media(prefers-reduced-transparency:reduce){
+ body.essenes-has-mobile-dock .essenes-mobile-dock{background:#f7f8f2;-webkit-backdrop-filter:none;backdrop-filter:none}
+}
+@supports not ((backdrop-filter:blur(1px)) or (-webkit-backdrop-filter:blur(1px))){
+ @media(max-width:760px){body.essenes-has-mobile-dock .essenes-mobile-dock{background:rgba(246,248,242,.97)}}
+}
+@media(prefers-contrast:more) and (max-width:760px){
+ body.essenes-has-mobile-dock .essenes-mobile-dock{background:#f7f8f2}
+ body.essenes-has-mobile-dock .essenes-mobile-dock__link[aria-current]{background:#d9e6d7}
+}
