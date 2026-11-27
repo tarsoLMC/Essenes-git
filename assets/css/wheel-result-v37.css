@@ -2,7 +2,7 @@
 .wheel-page{min-width:0}
 .wheel-page #result.result{max-width:1040px;padding-block:30px 44px}
 .wheel-page #result .result-heading{max-width:760px;margin:0 auto 24px}
-.wheel-page #result .result-heading h1{font-size:clamp(30px,3.4vw,44px);margin:10px 0 12px;line-height:1.1}
+.wheel-page #result .result-heading #result-title{font-size:clamp(30px,3.4vw,44px);margin:10px 0 12px;line-height:1.1}
 .wheel-page #result .result-heading>p#result-summary{font-size:14px;line-height:1.7;margin-top:0}
 .wheel-page #result .result-heading>.quiet{font-size:11px;margin-top:8px}
 .wheel-page #result .result-grid{grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);max-width:1040px;gap:20px;align-items:start}
@@ -63,7 +63,7 @@
  .wheel-page #result.result{width:calc(100% - 32px);padding-block:24px 32px}
  .wheel-page #result .result-heading{text-align:left;margin-bottom:18px}
  .wheel-page #result .result-heading .kicker{justify-content:flex-start;font-size:9px}
- .wheel-page #result .result-heading h1{font-size:32px;margin-block:10px}
+ .wheel-page #result .result-heading #result-title{font-size:32px;margin-block:10px}
  .wheel-page #result .result-heading>p#result-summary{font-size:12px}
  .wheel-page #result .result-heading>.quiet{font-size:10px}
  .wheel-page #result .result-grid{grid-template-columns:minmax(0,1fr);gap:14px}

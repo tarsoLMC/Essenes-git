@@ -1,4 +1,4 @@
-/* Abertura Essenes: em cada acesso, sem cookies ou bloqueio por sessão. */
+/* Abertura Essenes: abertura nos acessos diretos à home, sem cookies. */
 (() => {
   'use strict';
   const intro = document.getElementById('essenes-intro');
@@ -6,6 +6,10 @@
   const root = document.documentElement;
   const button = intro.querySelector('button');
   const preference = window.matchMedia('(prefers-reduced-motion: reduce)');
+  if (location.hash || preference.matches) {
+    root.classList.add('es-intro-arrived');
+    return;
+  }
   let holdTimer, exitTimer, safetyTimer;
   let finished = true, closing = false, pendingStart = false;
 
@@ -68,7 +72,7 @@
     document.addEventListener('keydown', onKey);
   };
   button.addEventListener('click', close);
-  window.addEventListener('pageshow', event => { if (event.persisted) start(); });
+  window.addEventListener('pageshow', event => { if (event.persisted && !location.hash && !preference.matches) start(); });
   window.addEventListener('pagehide', () => { pendingStart = false; finish(false); });
   document.addEventListener('visibilitychange', () => {
     if (document.hidden && !finished) { pendingStart = true; finish(false); }
