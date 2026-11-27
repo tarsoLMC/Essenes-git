@@ -12,11 +12,9 @@ function write(type,key,bytes){const hash=crypto.createHash('sha256').update(byt
  }
  for(const file of fs.readdirSync(root).filter(f=>f.endsWith('.html'))){
   const key=file==='roda-da-vida.html'?'wheel':file==='index.html'?'home':file==='contato.html'?'contact':'site';const scriptKey=key==='home'?'site':key;let html=fs.readFileSync(path.join(root,file),'utf8');
-  html=html.replace(/href="\/assets\/css\/[^\"]+"/g,'href="'+css[key]+'"');
-  const scriptPattern=/<script\b[^>]*src="\/assets\/js\/[^\"]+"[^>]*><\/script>/g;
-  const hasScript=scriptPattern.test(html);scriptPattern.lastIndex=0;
-  html=html.replace(scriptPattern,'');
-  if(hasScript)html=html.replace('</body>','<script src="'+js[scriptKey]+'" defer></script></body>');
+  // Update managed bundles without dropping page-specific tools, the dock or extra styles.
+  html=html.replace(/href="\/assets\/css\/essenes-(?:site|wheel|home|contact)\.[a-f0-9]{12}\.css"/g,'href="'+css[key]+'"');
+  html=html.replace(/src="\/assets\/js\/essenes-(?:site|wheel|contact)\.[a-f0-9]{12}\.js"/g,'src="'+js[scriptKey]+'"');
   if(file==='index.html'){
    const escape=text=>text.replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;').replaceAll('"','&quot;');
    const letters=text=>[...text].map((letter,i)=>'<span class="es-letter" style="--es-order:'+i+'">'+escape(letter)+'</span>').join('');

@@ -1,0 +1,69 @@
+/* Ferramentas, leitura e navegação compartilhadas. */
+.essenes-skip-link {
+  position: fixed;
+  top: .75rem;
+  left: .75rem;
+  transform: translateY(-180%);
+  z-index: 95;
+  padding: .75rem 1rem;
+  background: #fffdf6;
+  color: #173e2b;
+  border: 2px solid currentColor;
+  border-radius: .5rem;
+}
+.essenes-skip-link:focus { transform: none }
+.essenes-tools { padding-block: clamp(3rem, 7vw, 6rem) }
+.essenes-tools .tools-lead { max-width: 60ch; margin-block: 1rem 2rem; line-height: 1.65 }
+.essenes-tools-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem }
+.essenes-tool-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: .9rem;
+  padding: clamp(1.25rem, 4vw, 2.25rem);
+  border: 1px solid #c3d0bc;
+  border-radius: 1rem;
+  background: #f8f7ef;
+  color: #254732;
+}
+.essenes-tool-card h2, .essenes-tool-card h3 { margin: 0; font-size: clamp(1.75rem, 4vw, 2.45rem); color: #244631 }
+.essenes-tool-card p { margin: 0; line-height: 1.6; font-size: 1rem }
+.essenes-tool-card .btn { margin-top: auto }
+.essenes-tools-home { background: #e9eee2; color: #234431 }
+.essenes-tools .tools-more { margin-top: 1.5rem }
+.essenes-tools a:focus-visible, .essenes-skip-link:focus-visible { outline: 2px solid #795c38; outline-offset: 3px }
+.article-main :is(.article-body p, .article-body li) { font-size: 1rem; line-height: 1.75 }
+.article-main .article-hero-image img { display: block; width: 100%; height: 100%; object-fit: cover }
+.article-main .article-summary { margin: 0 0 1.5rem; padding-inline-start: 1rem; border-inline-start: 3px solid #8da382 }
+.article-main .article-summary strong { color: #244631 }
+.article-main .breadcrumbs { font-size: .8125rem }
+.essenes-family-page .family-summary { margin-block: 1.2rem; max-width: 55ch }
+.essenes-family-page #family-storage-note { color: #673c2c; margin-block: .75rem 0 }
+.essenes-family-page .screen-head h2:focus { outline: none }
+
+@media (max-width: 760px) {
+  .essenes-tools-grid { grid-template-columns: 1fr }
+  body.essenes-has-mobile-dock .essenes-mobile-dock__label { font-size: .6875rem; letter-spacing: -.015em }
+  body.essenes-has-mobile-dock.essenes-dock-input-active .essenes-mobile-dock { display: none }
+  .article-main .article-hero { padding-block: 1.5rem 2rem }
+  .article-main .article-hero-image { height: auto; aspect-ratio: 16 / 9 }
+  .essenes-family-page :is(input:not([type]), input[type="text"], input[type="number"], textarea, select),
+  .v36-contact :is(input, select) { font-size: 1rem }
+}
+@media (max-width: 350px) {
+  body.essenes-has-mobile-dock .essenes-mobile-dock__label { font-size: .625rem }
+}
+@media (prefers-reduced-motion: reduce) {
+  body.essenes-has-mobile-dock :is(.essenes-mobile-dock__link, .essenes-mobile-dock__icon) { transition: none }
+}
+
+@media (max-width: 500px) {
+  body { min-width: 0 }
+  body.essenes-has-mobile-dock .essenes-mobile-dock {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) minmax(0, 1.35fr) repeat(2, minmax(0, 1fr));
+  }
+  body.essenes-has-mobile-dock .essenes-mobile-dock__label {
+    white-space: normal;
+    overflow-wrap: anywhere;
+  }
+}

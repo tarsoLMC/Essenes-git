@@ -1,20 +1,21 @@
-ESSENES — FOTOS DO ALEXANDRE V38
+ESSENES V40
+Pacote completo para Hostinger
 
-PACOTE COMPLETO PARA A HOSTINGER
-1. Guarde um backup do site atual.
-2. Extraia o conteúdo do ZIP diretamente em public_html, substituindo os arquivos correspondentes. Não use uma pasta extra envolvendo o site.
-3. Envie o conteúdo completo: HTML, assets, arquivos PHP, metricas-privadas e seus arquivos .htaccess.
-4. Limpe o cache do site na Hostinger e recarregue a home.
+1. Faça um backup dos arquivos em public_html.
+2. Extraia o ZIP e envie seu conteúdo para public_html. Inclua os arquivos .htaccess.
+3. Preserve metricas-privadas/contagens.php caso exista na instalação atual.
+4. Limpe o cache da Hostinger. Abra a home, a página de ferramentas e a página de contato.
 
-A navegação e os contatos continuam em HTML/CSS/JavaScript. As contagens próprias usam PHP e gravação de arquivos pelo próprio site; foram testadas com PHP 8.3. Não há banco de dados nem conta de analytics para configurar. Os eventos são enviados apenas em HTTPS.
+O site usa HTML, CSS e JavaScript. As contagens existentes usam PHP com gravação
+de arquivos no servidor e envio dos eventos em HTTPS. O acesso privado ao painel
+continua usando a chave instalada anteriormente. Guarde a chave fora de public_html.
 
-O acesso privado ao painel está no arquivo Essenes_Acesso_Painel_V36.txt, entregue separadamente. Guarde-o fora de public_html: o link dá acesso às contagens. Não é necessário editar o código com a chave.
+Após publicar, confirme que https://essenes.com.br/sitemap.xml abre e envie o
+sitemap pelo Google Search Console. A solicitação de inspeção de URL pode começar
+pela home, pela página de ferramentas e pelo guia de atendimento online.
 
-Em uma primeira instalação, as contagens começam vazias. Se o painel V36 já estiver em uso, mantenha o arquivo metricas-privadas/contagens.php existente; ele não está neste ZIP. O acesso privado V36 continua o mesmo. As contagens não são visitantes únicos, mensagens enviadas nem sessões agendadas. O site não confirma horários automaticamente.
-
-Telefone preservado: +55 61 98173-8997.
-V38: novas fotos do Alexandre na abertura, apresentação e páginas internas, com versões WebP para celular. A Roda da Vida mantém o resultado compacto, o convite após 3 segundos, a pontuação, as perguntas, o download e o compartilhamento opcional da V37.
-Não altere DNS ou configurações de e-mail para instalar este pacote.
-
-Leia RELEASE-V38.md para as mudanças atuais. As releases V37 e anteriores e AUDITORIA-CONVERSAO-V36.md são registros históricos da base preservada.
-A entrega ainda não foi publicada na Hostinger.
+Para acompanhar o CTR orgânico, use o relatório de desempenho do Search Console.
+Compare cliques, impressões, CTR e posição média das mesmas URLs, consultas e
+dispositivos, em períodos equivalentes antes e depois da publicação. As contagens
+de cliques em WhatsApp mostram aberturas do link e não confirmam o envio de uma
+mensagem ou agendamento.
