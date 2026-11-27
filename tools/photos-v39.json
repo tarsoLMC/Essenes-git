@@ -1,0 +1,58 @@
+{
+  "images": {
+    "hero": {
+      "src": "/assets/img/alexandre-hero-v39.webp",
+      "width": 1122,
+      "height": 1402,
+      "srcset": "/assets/img/responsive/alexandre-hero-v39-480.webp 480w, /assets/img/responsive/alexandre-hero-v39-800.webp 800w, /assets/img/alexandre-hero-v39.webp 1122w",
+      "bytes": 142676
+    },
+    "about": {
+      "src": "/assets/img/alexandre-about-v39.webp",
+      "width": 1122,
+      "height": 1402,
+      "srcset": "/assets/img/responsive/alexandre-about-v39-480.webp 480w, /assets/img/responsive/alexandre-about-v39-800.webp 800w, /assets/img/alexandre-about-v39.webp 1122w",
+      "bytes": 162858
+    },
+    "online": {
+      "src": "/assets/img/alexandre-online-v39.webp",
+      "width": 1122,
+      "height": 748,
+      "srcset": "/assets/img/responsive/alexandre-online-v39-480.webp 480w, /assets/img/responsive/alexandre-online-v39-800.webp 800w, /assets/img/alexandre-online-v39.webp 1122w",
+      "bytes": 77890
+    },
+    "banner": {
+      "src": "/assets/img/alexandre-banner-v39.webp",
+      "width": 1122,
+      "height": 748,
+      "srcset": "/assets/img/responsive/alexandre-banner-v39-480.webp 480w, /assets/img/responsive/alexandre-banner-v39-800.webp 800w, /assets/img/alexandre-banner-v39.webp 1122w",
+      "bytes": 55672
+    }
+  },
+  "placements": [
+    {
+      "page": "constelacao-familiar-online.html",
+      "photo": "online"
+    },
+    {
+      "page": "index.html",
+      "photo": "hero"
+    },
+    {
+      "page": "index.html",
+      "photo": "online"
+    },
+    {
+      "page": "index.html",
+      "photo": "about"
+    },
+    {
+      "page": "constelacao-familiar-brasilia.html",
+      "photo": "banner"
+    },
+    {
+      "page": "constelacao-familiar-trabalho-dinheiro.html",
+      "photo": "online"
+    }
+  ]
+}
